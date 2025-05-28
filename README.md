@@ -4,7 +4,7 @@ In this setup i have configured nginx web server locally on an Ubuntu VM on port
 The nginx server can handle https request and also can redirect any http request to the https connection. 
 The nginx will act as the load balancer with least connection load balancing rule and also as reverse proxy.
 
-Backend Setup :-
+# Backend Setup :-
 
 I have created a basic node.js application using express js to serve the application on port 3000. 
 The application is deployed across 3 docker containers configured on port 3001,3002 and 3003. 
@@ -12,7 +12,7 @@ The request is sent to node.js server using port forwarding done in the containe
 
 How to Run the setup :-
 
-A) Configuring NGINX web server
+# A) Configuring NGINX web server
 
 1. Make sure you have a Linux VM 
 2. On it install nginx [ https://ubuntu.com/tutorials/install-and-configure-nginx#2-installing-nginx ]
@@ -24,7 +24,7 @@ A) Configuring NGINX web server
    c) Now start the nginx web server by typing nginx
    d) systemctl status nginx --> to see the status of our nginx service
 
-B) Configuring Docker 
+# B) Configuring Docker 
 
 Just see the official docs on how to install docker on ubuntu [ https://docs.docker.com/engine/install/ubuntu/ ]
 
@@ -33,6 +33,6 @@ Just see the official docs on how to install docker on ubuntu [ https://docs.doc
 3. run docker ps to see the status of our running containers
 
 On the web browser type :
-https://localhost:8080 and yes our web apps pops up !!!
+# https://localhost:8080 and yes our web apps pops up !!!
 
 The project is for learning purpose in my Devops Journey. Hope it puts some value in your learning as well.
