@@ -30,6 +30,8 @@ Just see the official docs on how to install docker on ubuntu [ https://docs.doc
 
 1. I have written Dockerfile to create the image and docker-compose.yaml to start our 3 containers.
 2. On the Vm run : docker compose up --build -d to create containers
+[Make sure you first move the nginx.conf file to /etc/nginx and then dockerize the code ]
+
 3. run docker ps to see the status of our running containers
 
 On the web browser type :
