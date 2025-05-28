@@ -16,11 +16,12 @@ How to Run the setup :-
 
 1. Make sure you have a Linux VM 
 2. On it install nginx [ https://ubuntu.com/tutorials/install-and-configure-nginx#2-installing-nginx ]
-    --> the configuration file will be at location /etc/nginx --? nginx.conf ( just edit this with the nginx.conf uploaded in the repository )
+    --> the configuration file will be at location /etc/nginx --> nginx.conf ( just edit this with the nginx.conf uploaded in the repository )
 3. run the commands to start our nginx web server -->
    a) nginx -t (to validate if our nginx.conf is correct or not )
    b) Make sure the port 8080 is not in use by any other process on your system
    --> to check --> lsof -i :8080 --> if any process is using the port then just kill that process using --> kill <process-id>
+   
    c) Now start the nginx web server by typing nginx
    d) systemctl status nginx --> to see the status of our nginx service
 
