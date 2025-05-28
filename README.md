@@ -20,7 +20,7 @@ How to Run the setup :-
 3. run the commands to start our nginx web server -->
    a) nginx -t (to validate if our nginx.conf is correct or not )
    b) Make sure the port 8080 is not in use by any other process on your system
-   --> to check --> lsof -i :8080 --> if any process is using the port then just kill that process using --> kill <process-id>
+   --> to check --> lsof -i :8080 --> if any process is using the port then just kill that process using --> kill process-id
    
    c) Now start the nginx web server by typing nginx
    d) systemctl status nginx --> to see the status of our nginx service
