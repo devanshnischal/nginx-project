@@ -36,6 +36,29 @@ Just see the official docs on how to install docker on ubuntu [ https://docs.doc
 3. run docker ps to see the status of our running containers
 
 On the web browser type :
-# https://localhost:8080 and yes our web apps pops up !!!
+# https://localhost:443 and yes our web apps pops up !!!
 
 The project is for learning purpose in my Devops Journey. Hope it puts some value in your learning as well.
+
+# C) Monitoring and Logging 
+
+We can see the log files under **/var/log/nginx**
+There are two log files here : access.log and error.log 
+
+But to be honest, reading the logs from these files are very hectic !!
+Solution : we can configure our own custom log logic for nginx.
+
+**Steps** :
+
+1. Create a file under /var/etc/nginx and name it as access_custom.log
+2. Make sure the owner of this file is **www-data** user --> this is the system user to handle nginx processes and it improves security to not let the root user handle nginx processes.
+3. Now, we have to configure nginx.conf file and include the custom logging directive in http block.
+
+    
+   http {
+    log_format custom_log 'Time=[$time_local]  Status=$status ClientIp=$remote_addr --> $upstream_addr';
+    access_log /var/log/nginx/access_custom.log custom_log;
+   }
+
+Hence, now we can see custom logs under : /var/log/nginx/access_custom.log file
+
